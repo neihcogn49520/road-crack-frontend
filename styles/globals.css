@@ -116,7 +116,7 @@ button {
   top: 0;
   left: 0;
   background-color: rgba(var(--background-default));
-  display: none;
+  display: flex;
   left: 0;
   right: 0;
   width: 100%;

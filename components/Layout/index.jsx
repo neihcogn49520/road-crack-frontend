@@ -21,14 +21,10 @@ const Layout = (props) => {
   useEffect(() => {
     if (typeof window !== 'undefined') {
       const loader = document.getElementById('loader');
-      const main = document.getElementById('main');
-      loader.style.display = 'flex';
-      main.style.display = 'none';
       if (loader)
       setTimeout(() => {
-          main.style.display = 'flex';
           loader.style.display = 'none';
-        }, 2000);
+        }, 3000);
     }
   }, []);
 
@@ -50,7 +46,7 @@ const Layout = (props) => {
           <Image width={500} height={500} src="/logo.png" className="rounded-[50%] w-[75px] h-[75px]" />
         </div>
       </div>
-      <div id="main" className="flex flex-col min-h-screen max-w-[100vw] overflow-x-clip bg-background-default text-text-main">
+      <div className="flex flex-col min-h-screen max-w-[100vw] overflow-x-clip bg-background-default text-text-main">
         {router.pathname !== "/404" && <><SubHeader /><Header themeToggle={themeToggle} theme={usertheme} /></>}
         <main className="flex-grow -z-1">{children}</main>
         {router.pathname !== "/404" && <Footer />}
