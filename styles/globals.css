@@ -4,23 +4,24 @@
 @tailwind utilities;
 
 html {
-  --primary-main: 50, 96, 194;
-  
-  --background-default: 248, 248, 248;
+  --primary-main: 253, 190, 52;
+
+  --background-default: 227, 246, 255;
   --background-paper: 255, 255, 255;
 
-  --text-main:31, 51, 88;
+  --text-main: 0, 41, 107;
 
-  --font-family-title: 'Exo', sans-serif;
-  --font-family-body: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --font-family-title: "Open Sans", sans-serif;
+  --font-family-body: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+    "Open Sans", "Helvetica Neue", sans-serif;
 }
 html.dark {
-  --primary-main: 91, 133, 223;
-  
+  --primary-main: 253, 190, 52;
+
   --background-default: 8, 13, 26;
   --background-paper: 14, 21, 38;
 
-  --text-main:230, 236, 255;
+  --text-main: 227, 246, 255;
 }
 
 ::-webkit-scrollbar {
@@ -32,9 +33,11 @@ html.dark {
   border-radius: 2rem;
   border: 3px solid rgba(var(--background-default));
 }
-*, *::before, *::after{
-  padding:0px;
-  margin:0px;
+*,
+*::before,
+*::after {
+  padding: 0px;
+  margin: 0px;
   box-sizing: border-box;
 }
 body {
@@ -46,15 +49,28 @@ body {
   font-size: 16px;
   font-weight: 400;
 }
-html, body {
+html,
+body {
   width: 100%;
   height: 100%;
   padding: 0px;
   margin: 0px;
-  overflow-x:unset;
-  }
+  overflow-x: unset;
+}
 
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .font-family {
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6,
+.font-family {
   font-family: var(--font-family-title);
   font-weight: 700;
   text-transform: capitalize;
@@ -64,26 +80,33 @@ p {
   line-height: 26px;
   opacity: 0.9;
 }
-img{
+img {
   user-select: none;
 }
 
-input[type="email"], input[type="password"], input[type="text"], input[type="tel"] {
+input[type="email"],
+input[type="password"],
+input[type="text"],
+input[type="tel"] {
   box-shadow: none;
   height: 45px;
   outline: none;
   font-size: 14px;
 }
 
-input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focus, input[type="tel"]:focus {
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus {
   box-shadow: none;
 }
 
 a {
   text-decoration: none;
-  transition: all .35s ease;
+  transition: all 0.35s ease;
 }
-a:focus, a:hover {
+a:focus,
+a:hover {
   text-decoration: none;
 }
 a:focus {
@@ -92,25 +115,25 @@ a:focus {
 button {
   outline: none;
 }
-.swiper-button-prev{
-  display:none !important;
+.swiper-button-prev {
+  display: none !important;
 }
-.swiper-button-next{
-  display:none !important;
+.swiper-button-next {
+  display: none !important;
 }
-.swiper-pagination-bullet{
+.swiper-pagination-bullet {
   width: 42px !important;
-  transition:300ms;
+  transition: 300ms;
   border-radius: 5px !important;
   height: 7px !important;
   background: rgba(var(--text-main)) !important;
 }
 .container {
-  max-width:1140px;
-  width:100%;
+  max-width: 1140px;
+  width: 100%;
   margin: 0px auto;
 }
-#loader{
+#loader {
   position: fixed;
   z-index: 1700;
   top: 0;
@@ -127,18 +150,18 @@ button {
 #loader div:nth-child(1) {
   z-index: 100;
   animation: float 4s linear infinite;
- }
+}
 @keyframes float {
-0% {
-transform: translateY(0px);
-}
-20% {
-transform: translateY(-10px);
-}
-50% {
-transform: translateY(-30px);
-}
-100% {
-transform: translateY(0px);
-}
+  0% {
+    transform: translateY(0px);
+  }
+  20% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }

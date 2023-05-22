@@ -1,12 +1,12 @@
-import React from "react";
-import Head from "next/head";
+import React from "react"
+import Head from "next/head"
 
 const Seo = (props) => {
-  const { title, description, children } = props;
+  const { title, description, children } = props
   return (
     <>
       <Head>
-        {title && <title>{title + " | Med Experts"}</title>}
+        {title && <title>{title + " | Phản ánh đường phố"}</title>}
         {description && <meta name="description" content={description} />}
         {title && <meta name="og:title" property="og:title" content={title} />}
         {description && <meta name="twitter:card" content={description} />}
@@ -15,7 +15,7 @@ const Seo = (props) => {
       </Head>
       {children}
     </>
-  );
-};
+  )
+}
 
-export default Seo;
+export default Seo

@@ -1,13 +1,13 @@
-import React from "react";
-import Seo from "../components/Customs/Seo";
-import { Home as HomeComponent } from "../components";
+import React from "react"
+import Seo from "../components/Customs/Seo"
+import { Home as HomeComponent } from "../components"
 
 const Home = () => {
   return (
-    <Seo title="Home" description="">
+    <Seo title="Trang chủ" description="">
       <HomeComponent />
     </Seo>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

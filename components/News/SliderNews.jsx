@@ -1,51 +1,70 @@
-import React from "react";
-import { HiOutlineArrowLongRight } from "react-icons/hi2";
-import {
-  FaFacebookF,
-  FaTwitter,
-  FaLinkedinIn,
-  FaTwitch,
-  FaWhatsapp,
-  FaTelegram,
-  FaDiscord,
-} from "react-icons/fa";
-import Link from "next/link";
-import Image from "next/image";
+import React from "react"
+import { Swiper, SwiperSlide } from "swiper/react"
+import { Autoplay, Navigation, Pagination, Scrollbar, A11y } from "swiper"
+import "swiper/css"
+import "swiper/css/navigation"
+import "swiper/css/pagination"
+import Link from "next/link"
+import Image from "next/image"
+import { data } from "autoprefixer"
 
 const Intro = () => {
-  const socialLink = [
+  const tintuc = [
     {
-      icon: <FaFacebookF className="w-[16px] h-[16px]" />,
-      url: "https://google.com",
+      image: "/images/news/tintuc-1.png",
     },
     {
-      icon: <FaTwitch className="w-[16px] h-[16px]" />,
-      url: "https://google.com",
+      image: "/images/news/tintuc-2.png",
     },
     {
-      icon: <FaTelegram className="w-[16px] h-[16px]" />,
-      url: "https://google.com",
+      image: "/images/news/tintuc-3.png",
     },
-    {
-      icon: <FaDiscord className="w-[16px] h-[16px]" />,
-      url: "https://google.com",
-    },
-    {
-      icon: <FaTwitter className="w-[16px] h-[16px]" />,
-      url: "https://google.com",
-    },
-    {
-      icon: <FaLinkedinIn className="w-[16px] h-[16px]" />,
-      url: "https://google.com",
-    },
-    {
-      icon: <FaWhatsapp className="w-[16px] h-[16px]" />,
-      url: "https://google.com",
-    },
-  ];
+  ]
   return (
-        <div className="flex flex-wrap">
-          <div className="lg:flex-[33.33%] md:flex-[50%] flex-[100%] px-4 md:px-0">
+    <>
+      <div className="w-full text-center sm:p-4 px-4 mb-12 md:max-w-[60%] mx-auto">
+        <h1 className="text-3xl md:text-4xl font-semibold tracking-wider !leading-tight mb-4">
+          <span className="text-primary-main font-bold uppercase">Tin tức</span> mới nhất
+        </h1>
+      </div>
+
+      <div className="px-0 sm:px-4">
+        <Swiper
+          modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+          loop={false}
+          navigation
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          breakpoints={{
+            640: {
+              slidesPerView: 1,
+              spaceBetween: 30,
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 40,
+            },
+          }}
+          slidesPerView={1}
+          spaceBetween={30}
+          pagination={{ clickable: true }}
+          scrollbar={{ draggable: true }}
+        >
+          {tintuc.map(({ image }, index) => (
+            <SwiperSlide key={index}>
+              <div className="w-full mt-4 mb-20 md:mb-24 !h-full">
+                <div className="h-full rounded-2xl p-2 bg-text-main/5">
+                  <div className=" items-center">
+                    <Image alt={image} src={image} width={400} height={600} className="w-full h-full rounded-md " />
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+        {/* <div className="lg:flex-[33.33%] md:flex-[50%] flex-[100%] px-4 md:px-0">
             <div className="rounded-2xl overflow-hidden !leading-[0px] ">
               <Image
                 src="/images/profile.jpg"
@@ -100,9 +119,10 @@ const Intro = () => {
               </button>
             </Link>
             </div>
-          </div>
-        </div>
-  );
-};
+          </div> */}
+      </div>
+    </>
+  )
+}
 
-export default Intro;
+export default Intro

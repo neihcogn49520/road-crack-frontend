@@ -1,12 +1,12 @@
-import React from "react";
+import React from "react"
 
-import { Section } from "../";
-import Banner from "./Banner";
-import About from "./About";
-import Gallery from "./Gallery";
-import Features from "./Features";
-import CtaSection from "./CtaSection";
-import Testimonial from "./Testimonial";
+import { Section } from "../"
+import Banner from "./Banner"
+import News from "./News"
+import Gallery from "./Gallery"
+import Features from "./Features"
+import CtaSection from "./CtaSection"
+import Reflect from "./Reflect"
 
 const Index = () => {
   return (
@@ -15,20 +15,17 @@ const Index = () => {
       <Section id="features">
         <Features />
       </Section>
-      <Section id="about">
-        <About />
+      <Section id="news">
+        <News />
       </Section>
       <Section id="cta">
         <CtaSection />
       </Section>
-      <Section id="gallery">
-        <Gallery />
-      </Section>
-      <Section id="testimonial">
-        <Testimonial />
+      <Section id="reflect">
+        <Reflect />
       </Section>
     </>
-  );
-};
+  )
+}
 
-export default Index;
+export default Index
