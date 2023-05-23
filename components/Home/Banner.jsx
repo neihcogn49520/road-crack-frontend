@@ -25,7 +25,7 @@ const Hero = (props) => {
               Chúng tôi sẽ giúp bạn tiếp nhận và phân tích mức độ hư hỏng để đưa đến các cơ quan liên quan nhanh nhất để
               có thể kịp thời có các biện pháp cải thiện cơ sở hạ tầng tốt nhất có thể.
             </p>
-            <Link href="/appointment">
+            <Link href="/reflects">
               <div className="inline-flex items-center cursor-pointer group uppercase align-middle text-center transition-all select-none whitespace-nowrap py-2 px-4 md:py-2 md:px-6 text-xs md:text-base leading-normal no-underline rounded-full bg-primary-main hover:bg-transparent border-2 border-primary-main hover:text-primary-main text-white  outline-none font-bold">
                 Xem các phản ánh của bạn
                 <HiOutlineArrowLongRight className="w-[18px] h-[18px] ml-2 group-hover:ml-4 transition-all duration-100" />

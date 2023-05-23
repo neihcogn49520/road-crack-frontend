@@ -57,7 +57,7 @@ const Qualification = () => {
           <ul className="list-style-none flex">
             <li>
               <a className="pointer-events-none relative block rounded-full bg-transparent px-3 py-1.5 text-sm text-main transition-all duration-300 dark:text-main">
-                Previous
+                Trước
               </a>
             </li>
             <li>
@@ -92,7 +92,7 @@ const Qualification = () => {
                 className="relative block rounded-full bg-transparent px-3 py-1.5 text-sm text-maintransition-all duration-300 hover:bg-primary-main dark:text-main dark:hover:bg-text-main dark:hover:text-main"
                 href="#!"
               >
-                Next
+                Tiếp
               </a>
             </li>
           </ul>

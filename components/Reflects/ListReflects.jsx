@@ -1,6 +1,73 @@
 import React from "react"
+import Image from "next/image"
+import { HiOutlineDotsHorizontal, HiOutlineMinusCircle, HiOutlineCheck } from "react-icons/hi"
+import { BiReceipt } from "react-icons/bi"
+import Ticker from "../Customs/Ticker"
 
-const Qualification = () => {
+const ListReflects = () => {
+  const data = [
+    {
+      image: "/images/reflect/1.jpg",
+      title: "Đường này đang rất nhiều ổ gà! Cần sửa gấp",
+      address: "Lê Văn Việt, phường Tăng Nhơn Phú A, TP Thủ Đức, TPHCM ",
+      status: {
+        icon: <HiOutlineDotsHorizontal className="w-6 h-6" />,
+        content: "Đang xử lý",
+        className: "text-main",
+      },
+    },
+    {
+      image: "/images/reflect/2.jpg",
+      title: "Đường này đang rất nhiều ổ gà! Cần sửa gấp",
+      address: "Lê Văn Việt, phường Tăng Nhơn Phú A, TP Thủ Đức, TPHCM",
+      status: {
+        icon: <HiOutlineMinusCircle className="w-6 h-6" />,
+        content: "Chưa xử lý",
+        className: "text-red-pastel-600",
+      },
+    },
+    {
+      image: "/images/reflect/3.jpg",
+      title: "Đường này đang rất nhiều ổ gà! Cần sửa gấp",
+      address: "Lê Văn Việt, phường Tăng Nhơn Phú A, TP Thủ Đức, TPHCM",
+      status: {
+        icon: <HiOutlineCheck className="w-6 h-6" />,
+        content: "Đã xử lý",
+        className: "text-green-400",
+      },
+    },
+    {
+      image: "/images/reflect/4.jpg",
+      title: "Đường này đang rất nhiều ổ gà! Cần sửa gấp",
+      address: "Lê Văn Việt, phường Tăng Nhơn Phú A, TP Thủ Đức, TPHCM",
+      status: {
+        icon: <BiReceipt className="w-6 h-6" />,
+        content: "Đã tiếp nhận",
+        className: "text-primary-main",
+      },
+    },
+    {
+      image: "/images/reflect/5.jpg",
+      title: "Đường này đang rất nhiều ổ gà! Cần sửa gấp",
+      address: "Lê Văn Việt, phường Tăng Nhơn Phú A, TP Thủ Đức, TPHCM",
+      status: {
+        icon: <HiOutlineCheck className="w-6 h-6" />,
+        content: "Đã xử lý",
+        className: "text-green-400",
+      },
+    },
+    {
+      image: "/images/reflect/1.jpg",
+      title: "Đường này đang rất nhiều ổ gà! Cần sửa gấp",
+      address: "Lê Văn Việt, phường Tăng Nhơn Phú A, TP Thủ Đức, TPHCM",
+      status: {
+        icon: <HiOutlineDotsHorizontal className="w-6 h-6" />,
+        content: "Đang xử lý",
+        className: "text-main",
+      },
+    },
+  ]
+
   return (
     <>
       <div className="flex flex-wrap px-4">
@@ -16,43 +83,50 @@ const Qualification = () => {
           <div className="inline-block min-w-full py-2 sm:px-6 lg:px-8">
             <div className="overflow-hidden">
               <table className="min-w-full text-left text-sm font-light">
-                <thead className="border-b bg-white font-medium dark:border-neutral-500 dark:bg-neutral-600">
+                <thead className="border-b bg-white-blue-30 font-medium dark:border-neutral-500 dark:bg-neutral-600">
                   <tr>
                     <th scope="col" className="px-6 py-4">
                       #
                     </th>
                     <th scope="col" className="px-6 py-4">
-                      First
+                      Hình ảnh
                     </th>
                     <th scope="col" className="px-6 py-4">
-                      Last
+                      Mô tả
                     </th>
                     <th scope="col" className="px-6 py-4">
-                      Handle
+                      Địa chỉ
+                    </th>
+                    <th scope="col" className="px-6 py-4">
+                      Trạng thái
                     </th>
                   </tr>
                 </thead>
-                <tbody>
-                  <tr className="border-b bg-neutral-100 dark:border-neutral-500 dark:bg-neutral-700">
-                    <td className="whitespace-nowrap px-6 py-4 font-medium">1</td>
-                    <td className="whitespace-nowrap px-6 py-4">Mark</td>
-                    <td className="whitespace-nowrap px-6 py-4">Otto</td>
-                    <td className="whitespace-nowrap px-6 py-4">@mdo</td>
-                  </tr>
-                  <tr className="border-b bg-white dark:border-neutral-500 dark:bg-neutral-600">
-                    <td className="whitespace-nowrap px-6 py-4 font-medium">2</td>
-                    <td className="whitespace-nowrap px-6 py-4">Jacob</td>
-                    <td className="whitespace-nowrap px-6 py-4">Thornton</td>
-                    <td className="whitespace-nowrap px-6 py-4">@fat</td>
-                  </tr>
-                  <tr className="border-b bg-neutral-100 dark:border-neutral-500 dark:bg-neutral-700">
-                    <td className="whitespace-nowrap px-6 py-4 font-medium">3</td>
-                    <td colspan="2" className="whitespace-nowrap px-6 py-4 text-center">
-                      Larry the Bird
-                    </td>
-                    <td className="whitespace-nowrap px-6 py-4">@twitter</td>
-                  </tr>
-                </tbody>
+                {data.map(({ image, title, address, status }, index) => (
+                  <tbody key={index}>
+                    <tr className="border-b bg-background-default hover:bg-white-blue-30 dark:border-text-main dark:text-main dark:bg-background-default items-center">
+                      <td className="whitespace-nowrap px-6 py-4 font-medium">
+                        {(stt) =>
+                          data.forEach((i) => {
+                            stt = i
+                            i++
+                          })
+                        }
+                      </td>
+                      <td className="whitespace-nowrap px-6 py-4">
+                        <div className="overflow-hidden rounded-2xl">
+                          <Image width={200} height={400} src={image} alt="service" className="max-w-full h-auto" />
+                        </div>
+                      </td>
+                      <td className="whitespace-nowrap px-6 py-4 font-bold"> {title} </td>
+                      <td className="whitespace-nowrap px-6 py-4"> {address} </td>
+                      <td className="whitespace-nowrap px-6 py-4 flex space-x-2 items-center">
+                        <span className={status.className}>{status.icon}</span>
+                        <span className={status.className}>{status.content}</span>
+                      </td>
+                    </tr>
+                  </tbody>
+                ))}
               </table>
             </div>
           </div>
@@ -62,4 +136,4 @@ const Qualification = () => {
   )
 }
 
-export default Qualification
+export default ListReflects

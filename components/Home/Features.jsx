@@ -47,7 +47,7 @@ const Reflect = () => {
                 <span className="font-bold">Trạng thái </span> <span>: Đã | Đang | Chưa xử lý</span>
               </li>
             </ul>
-            <Link href="/appointment">
+            <Link href="/reflects">
               <button className="inline-flex mt-6 transition items-center cursor-pointer uppercase align-middle text-center select-none whitespace-nowrap py-2 px-6 text-sm leading-normal no-underline rounded-full bg-text-main dark:bg-text-main/5 hover:bg-transparent border-2 border-text-main dark:border-text-main/10 dark:hover:bg-primary-main hover:text-text-main text-white outline-none font-bold">
                 Xem phản ánh
               </button>

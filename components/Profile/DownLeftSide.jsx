@@ -1,6 +1,6 @@
 import Image from "next/image"
 import React, { useEffect, useRef, useState } from "react"
-import { HiOutlineArrowLongRight, HiOutlineChevronDown } from "react-icons/hi2"
+import { HiDownload } from "react-icons/hi"
 
 const DownLeftSide = () => {
   const selectDropdownRef = useRef()
@@ -59,68 +59,66 @@ const DownLeftSide = () => {
   return (
     <div className="lg:w-2/3">
       <div className="flex-[50%] p-2">
-        <h3 className="text-xl md:text-2xl tracking-wider !leading-tight">
-          Book a new <span className="uppercase text-main-main font-bold">appointment</span>
-        </h3>
+        <h3 className="text-xl md:text-2xl tracking-wider !leading-tight">Thông tin cá nhân</h3>
         <div className="h-[6px] bg-primary-main w-[100px] mt-4 mb-8" />
         <form className="flex flex-wrap" noValidate onSubmit={handleSubmit}>
           <div className="md:w-1/2 w-full py-2 pr-4 mb-2">
             <label for="firstname" className="block mb-3 px-1 md:text-sm  text-base font-medium capitalize">
-              First Name
+              Họ <span className="text-red-pastel-600"> *</span>
             </label>
             <input
               id="firstname"
               name="firstname"
               value={firstname}
               onChange={handleInputChange}
-              placeholder="First Name *"
+              placeholder="Nguyen"
               className="py-2.5 px-4 text-text-main/80 focus:border-primary-main/70 focus:outline-none focus:ring-1 focus:ring-primary-main/70 outline-none w-full md:text-sm  text-base leading-normal border border-text-main/10 bg-background-paper rounded-lg"
             />
           </div>
 
           <div className="md:w-1/2 w-full py-2 pr-4 mb-2">
             <label for="lastname" className="block mb-3 px-1 md:text-sm text-base font-medium capitalize">
-              Last Name
+              Tên <span className="text-red-pastel-600"> *</span>
             </label>
             <input
               id="lastname"
               name="lastname"
               value={lastname}
               onChange={handleInputChange}
-              placeholder="Last Name *"
+              placeholder="Hien"
               className="py-2.5 px-4 text-text-main/80 focus:border-primary-main/70 focus:outline-none focus:ring-1 focus:ring-primary-main/70 outline-none w-full md:text-sm  text-base leading-normal border border-text-main/10 bg-background-paper rounded-lg"
             />
           </div>
 
           <div className="w-full py-2 pr-4 mb-2">
             <label for="email" className="block mb-3 px-1 md:text-sm text-base font-medium capitalize">
-              Email
+              Email <span className="text-red-pastel-600"> *</span>
             </label>
             <input
               id="email"
               name="email"
               value={email}
               onChange={handleInputChange}
-              placeholder="E-mail *"
+              placeholder="E-mail"
               className="py-2.5 px-4 text-text-main/80 focus:border-primary-main/70 focus:outline-none focus:ring-1 focus:ring-primary-main/70 outline-none w-full md:text-sm  text-base leading-normal border border-text-main/10 bg-background-paper rounded-lg"
             />
           </div>
 
           <div className="w-full md:w-1/2 py-2 pr-4 mb-2">
             <label for="phone" className="block mb-3 px-1 md:text-sm text-base font-medium capitalize">
-              Phone
+              Số điện thoại <span className="text-red-pastel-600"> *</span>
             </label>
             <input
               id="phone"
               name="phone"
               value={phone}
               onChange={handleInputChange}
-              placeholder="Phone *"
+              placeholder="0894261238"
               className="py-2.5 px-4 text-text-main/80 focus:border-primary-main/70 focus:outline-none focus:ring-1 focus:ring-primary-main/70 outline-none w-full md:text-sm  text-base leading-normal border border-text-main/10 bg-background-paper rounded-lg"
             />
           </div>
 
-          <div className="w-full md:w-1/2 py-2 pr-4 mb-2">
+          {/* <div className="w-full md:w-1/2 py-2 pr-4 mb-2">
             <label for="subject" className="block mb-3 px-1 md:text-sm text-base font-medium capitalize">
               Select a subject
             </label>
@@ -188,11 +186,11 @@ const DownLeftSide = () => {
                 </ul>
               )}
             </div>
-          </div>
+          </div> */}
 
           <div className="w-full py-2 pr-4 mb-2">
             <label htmlFor="message" className="block mb-4 px-1 md:text-sm  text-base font-medium capitalize">
-              Message
+              Thông tin khác
             </label>
             <textarea
               id="message"
@@ -201,12 +199,12 @@ const DownLeftSide = () => {
               rows={7}
               cols={20}
               onChange={handleInputChange}
-              placeholder="Message*"
+              placeholder="Thông tin khác"
               className="py-2.5 px-4 text-text-main/80 focus:border-primary-main/70 focus:outline-none focus:ring-1 focus:ring-primary-main/70 resize-none outline-none w-full md:text-sm  text-base leading-normal border border-text-main/10 bg-background-paper rounded-lg"
             />
           </div>
 
-          <div className="w-full">
+          <div className="w-full space-x-3">
             <button
               type="submit"
               style={{ opacity: 75 }}
@@ -220,10 +218,13 @@ const DownLeftSide = () => {
                   !phone.match(/^(\+\d{1,3}[- ]?)?\d{10}$/) ||
                   !message
               )}
-              className="inline-flex my-3 items-center cursor-pointer disabled:cursor-default group uppercase align-middle text-center transition-all select-none whitespace-nowrap py-2 px-6 md:text-sm  text-base leading-normal no-underline rounded-full bg-primary-main hover:bg-transparent disabled:bg-background-paper disabled:text-text-main/80 disabled:border-transparent border-2 border-primary-main hover:text-primary-main text-white outline-none font-bold"
+              className="inline-flex my-3 items-center cursor-pointer disabled:cursor-default group uppercase align-middle text-center transition-all select-none whitespace-nowrap py-2 px-6 md:text-sm  text-base leading-normal no-underline rounded-full bg-text-main hover:bg-transparent disabled:bg-background-paper disabled:text-text-main/80 disabled:border-transparent border-2 border-primary-main hover:text-primary-main text-white outline-none font-bold"
             >
-              Submit
-              <HiOutlineArrowLongRight className="w-[18px] h-[18px] ml-2 group-hover:ml-4 group-disabled:ml-2 transition-all duration-100" />
+              Lưu
+              <HiDownload className="w-[18px] h-[18px] ml-2 group-hover:ml-4 group-disabled:ml-2 transition-all duration-100" />
+            </button>
+            <button className="inline-flex items-center cursor-pointer group uppercase align-middle text-center transition-all select-none whitespace-nowrap py-2 px-6 text-sm leading-normal no-underline rounded-full bg-red-pastel-600 dark:bg-text-main/5 hover:bg-transparent border-2 border-red-pastel-600 dark:border-text-main/10 dark:hover:bg-primary-main hover:text-red-pastel-600 text-white outline-none font-bold">
+              Hủy
             </button>
           </div>
         </form>

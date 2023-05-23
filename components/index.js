@@ -4,7 +4,7 @@ export { default as News } from "./News"
 export { default as Reflect } from "./Reflects"
 export { default as FAQuestions } from "./FAQuestions"
 export { default as Contact } from "./Contact"
-export { default as Appointment } from "./Appointment"
+export { default as Profile } from "./Profile"
 export { default as Login } from "./Login"
 export { default as SignUp } from "./SignUp"
 

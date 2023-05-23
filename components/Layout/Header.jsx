@@ -28,7 +28,7 @@ const Header = (props) => {
     },
     {
       name: "Thông tin cá nhân",
-      url: "/faq",
+      url: "/profile",
     },
     {
       name: "Hỗ trợ",
@@ -150,14 +150,14 @@ const Header = (props) => {
               </li>
             ))}
           </div>
-          <Link href="/appointment">
+          <Link href="/login">
             <button
               className={`inline-flex capitalize items-center cursor-pointer group align-middle text-center transition-all select-none whitespace-nowrap py-2 px-6 text-sm leading-normal no-underline rounded-md bg-text-main hover:bg-primary-main text-white outline-none font-bold ${
-                router.pathname == "/appointment" ? "!bg-primary-main" : ""
+                router.pathname == "/login" ? "!bg-primary-main" : ""
               }`}
               onClick={handleDrawerClose}
             >
-              Đăng ký
+              Đăng nhập
             </button>
           </Link>
         </ul>

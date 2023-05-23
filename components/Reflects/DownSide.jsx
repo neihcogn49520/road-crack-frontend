@@ -18,7 +18,7 @@ const DownSide = () => {
       address: "Lê Văn Việt, phường Tăng Nhơn Phú A, TP Thủ Đức, TPHCM",
       author: {
         avatar: "/images/reflect/avatar.jpeg",
-        username: "Ngoc Hien",
+        username: "Doan Nhat",
       },
     },
     {
@@ -27,7 +27,7 @@ const DownSide = () => {
       address: "Lê Văn Việt, phường Tăng Nhơn Phú A, TP Thủ Đức, TPHCM",
       author: {
         avatar: "/images/reflect/avatar.jpeg",
-        username: "Ngoc Hien",
+        username: "Bich Phuong",
       },
     },
     {
@@ -36,7 +36,7 @@ const DownSide = () => {
       address: "Lê Văn Việt, phường Tăng Nhơn Phú A, TP Thủ Đức, TPHCM",
       author: {
         avatar: "/images/reflect/avatar.jpeg",
-        username: "Ngoc Hien",
+        username: "Trinh Ngoc Nhi",
       },
     },
     {
@@ -45,7 +45,7 @@ const DownSide = () => {
       address: "Lê Văn Việt, phường Tăng Nhơn Phú A, TP Thủ Đức, TPHCM",
       author: {
         avatar: "/images/reflect/avatar.jpeg",
-        username: "Ngoc Hien",
+        username: "Tien",
       },
     },
     {
@@ -54,27 +54,33 @@ const DownSide = () => {
       address: "Lê Văn Việt, phường Tăng Nhơn Phú A, TP Thủ Đức, TPHCM",
       author: {
         avatar: "/images/reflect/avatar.jpeg",
-        username: "Ngoc Hien",
+        username: "Dang Van Bi",
       },
     },
   ]
   return (
     <div className="flex flex-wrap ">
-      {data.map(({ image, title, address }, index) => (
+      {data.map(({ image, title, address, author }, index) => (
         <div key={index} className="lg:w-1/3 p-4 md:w-1/2 sm:w-1/2">
           <div className="mb-4 bg-text-main/5 rounded-2xl p-4">
             <div className="overflow-hidden rounded-2xl">
-              <Image
-                width={400}
-                height={400}
-                src={image}
-                alt="service"
-                className="max-w-full h-auto object-cover object-center"
-              />
+              <Image width={400} height={400} src={image} alt="service" className="max-w-full h-auto" />
             </div>
             <div>
               <h3 className="mt-6 mb-1.5 text-xl">{title}</h3>
               <p className="mb-4 !leading-relaxed text-sm md:text-sm">{address}</p>
+            </div>
+            <div className="inline-flex items-center">
+              <Image
+                alt={author.avatar}
+                src={author.avatar}
+                width={200}
+                height={200}
+                className="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center"
+              />
+              <div className="flex-grow flex flex-col pl-4">
+                <h6 className="title-font font-medium">{author.username}</h6>
+              </div>
             </div>
           </div>
         </div>
